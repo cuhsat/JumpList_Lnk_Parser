@@ -410,6 +410,7 @@ class JL:
             1: "Win7/8",
             3: "Win10 build 1511",
             4: 'Win10 build 1607',
+            5: 'Win?? build ????',
             6: 'Win11 build 2861'
         }
 
@@ -440,7 +441,7 @@ class JL:
             }
 
             # this means it is Windows10/11 machine not Windows 7/8
-            if DestList_header['Version_Number'] in (3, 4, 6):
+            if DestList_header['Version_Number'] in (3, 4, 5, 6):
                 DestList_Entry['Entry_ID_Number'] = self.unpack_int_l(entry_data[88:92])
                 DestList_Entry['Access_Counter']  = self.unpack_int_l(entry_data[116:120])
 
