@@ -1,4 +1,4 @@
-# JumpList_Lnk_Parser
+# JLParser
 Parser for both JumpList and Lnk files artifacts
 
 

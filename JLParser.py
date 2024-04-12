@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 import json
 import struct
 import uuid
@@ -16,26 +16,6 @@ https://github.com/libyal/liblnk/blob/master/documentation/Windows%20Shortcut%20
 https://community.malforensics.com/t/list-of-jump-list-ids/158
 """
 
-logo ="""                           
-                    _:*///:_                     
-                _+*///////////+_                
-    ____----*////////////////////**----____    
-   *//////////////////////////////////********    
-   */////////////////       ////**************    
-   *////////////////          /***************    
-   *///////////////   /////   ****************    
-   *//////////////   /////**   ***************    
-   *//////////////   ////***   ***************    
-   *//////////////   ///****   ***************    
-   *////////////                 *************    
-   *////////////    Saleh Bin    *************    
-   *////////////     Muhaysin    *************    
-   *////////////                 *************    
-    *////////********************************     
-     */////  github.com/salehmuhaysin  *****      
-      *///*********************************             
-======================================================
-"""
 
 appid_path = os.path.dirname(os.path.abspath(__file__)) + '/JLParser_AppID.csv'
 
@@ -43,17 +23,15 @@ appid_path = os.path.dirname(os.path.abspath(__file__)) + '/JLParser_AppID.csv'
 class JL:
 
 
-    quiet     = True # If true then show the print details, if false only show the result in screen
-    pretty     = False
+    quiet = True # If true then show the print details, if false only show the result in screen
+    pretty = False
 
-    codecs = ["ascii","cp1256"]
+    codecs = ["ascii", "cp1256"]
 
 
     def __init__(self , args , appid_path):
         if not args.quiet:
             self.quiet = False
-
-        self.print_msg(logo)
 
         if args.input_file is None and args.input_dir is None:
             self.print_msg("[-] Error: You need to provide either file or directory (-f or -d)")
@@ -776,9 +754,8 @@ def main():
     optionalargs.add_argument('-q' , dest='quiet', action='store_true' , help="Don't show the information messages, only the results")
 
     args = a_parser.parse_args()
-    jumplist = JL(args , appid_path)
+    jumplist = JL(args, appid_path)
 
 
-
-main()
-
+if __name__ == '__main__':
+    main()
