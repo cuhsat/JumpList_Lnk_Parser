@@ -73,6 +73,6 @@ Artifact
 ```
 
 # Helpful References: 
-https://cyberforensicator.com/wp-content/uploads/2017/01/1-s2.0-S1742287616300202-main.2-14.pdf
+https://web.archive.org/web/20211115211249/https://cyberforensicator.com/wp-content/uploads/2017/01/1-s2.0-S1742287616300202-main.2-14.pdf
 https://github.com/libyal/liblnk/blob/master/documentation/Windows%20Shortcut%20File%20(LNK)%20format.asciidoc
 https://community.malforensics.com/t/list-of-jump-list-ids/158
