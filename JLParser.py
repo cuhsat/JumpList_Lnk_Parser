@@ -409,8 +409,10 @@ class JL:
         Version_Number = {
             1: "Win7/8",
             3: "Win10 build 1511",
-            4: 'Win10 build 1607'
+            4: 'Win10 build 1607',
+            6: 'Win11 build 2861'
         }
+
 
         DestList_header['OS_Version'] = Version_Number[DestList_header['Version_Number']] if DestList_header['Version_Number'] in Version_Number.keys() else "Unknown"
         
@@ -437,8 +439,8 @@ class JL:
                 'Pin_Status_Counter'        : 'unpinned' if self.unpack_int_l(entry_data[108:112]) == 0xFFFFFFFF else str(self.unpack_int_l(entry_data[108:112])),
             }
 
-            # this means it is Windows10 machine not Windows 7/8
-            if DestList_header['Version_Number'] == 3 or DestList_header['Version_Number'] == 4: 
+            # this means it is Windows10/11 machine not Windows 7/8
+            if DestList_header['Version_Number'] in (3, 4, 6):
                 DestList_Entry['Entry_ID_Number'] = self.unpack_int_l(entry_data[88:92])
                 DestList_Entry['Access_Counter']  = self.unpack_int_l(entry_data[116:120])
 
