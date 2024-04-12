@@ -1,2 +1,2 @@
 argparse
-olefile==0.46
+olefile
